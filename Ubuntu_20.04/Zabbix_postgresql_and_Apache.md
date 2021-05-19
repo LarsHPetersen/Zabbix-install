@@ -1,4 +1,4 @@
-# Zabbix server 5.2 install with Nginx and PostgreSQL on Ubuntu 20.04
+# Zabbix server 5.2 install with Apache2 and PostgreSQL on Ubuntu 20.04
 
 ### 1. Update the system
 
@@ -10,11 +10,27 @@ sudo apt upgrade
 
 ------
 
+### 2. Install postgresql, apache2, vim and gnupg
 
-### 2. Install postgresql
+```bash 
+sudo apt install apache2 vim gnupg 
+```
+
+Install postgresql 13
 
 ```bash
-sudo apt install postgresql
+# Create the file repository configuration:
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+
+# Import the repository signing key:
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+
+# Update the package lists:
+sudo apt-get update
+
+# Install the latest version of PostgreSQL.
+# If you want a specific version, use 'postgresql-12' or similar instead of 'postgresql':
+sudo apt-get -y install postgresql-13
 ```
 
 ------
@@ -82,7 +98,7 @@ sudo zcat /usr/share/doc/zabbix-server-pgsql*/create.sql.gz | sudo -u zabbix psq
 
 Edit file /etc/zabbix/zabbix_server.conf
 
-```
+```conf
 DBPassword=password
 ```
 
@@ -92,7 +108,7 @@ DBPassword=password
 
 Edit file /etc/zabbix/apache.conf, uncomment and set the right timezone for you.
 
-```
+```php
 # php_value date.timezone Europe/Riga
 ```
 
