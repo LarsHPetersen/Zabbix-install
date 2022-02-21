@@ -57,7 +57,7 @@ sudo apt update
 ### 7. Install Zabbix Server, Zabbix Agent and Zabbix frontend
 
 ```bash
-sudo apt install zabbix-server-pgsql zabbix-frontend-php php7.3-pgsql zabbix-nginx-conf zabbix-agent
+sudo apt install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-nginx-conf zabbix-agent
 ```
 
 ------
