@@ -129,11 +129,11 @@ Edit file /etc/zabbix/php-fpm.conf, uncomment and set the right timezone for you
 ### 12. Start Zabbix server and agent processes
 
 ```bash
-systemctl restart zabbix-server zabbix-agent nginx php7.3-fpm
+systemctl restart zabbix-server zabbix-agent nginx php7.4-fpm
 
-systemctl enable zabbix-server zabbix-agent nginx php7.3-fpm
+systemctl enable zabbix-server zabbix-agent nginx php7.4-fpm
 
-systemctl status zabbix-server zabbix-agent nginx php7.3-fpm
+systemctl status zabbix-server zabbix-agent nginx php7.4-fpm
 ```
 
 ------
