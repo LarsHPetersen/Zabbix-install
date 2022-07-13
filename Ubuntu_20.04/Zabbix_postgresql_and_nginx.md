@@ -18,7 +18,7 @@ sudo apt install nginx vim gnupg
 
 ------
 
-### 3. Install postgresql 13
+### 3. Install postgresql 14
 
 ```bash
 # Create the file repository configuration:
@@ -32,7 +32,7 @@ sudo apt-get update
 
 # Install the latest version of PostgreSQL.
 # If you want a specific version, use 'postgresql-12' or similar instead of 'postgresql':
-sudo apt-get -y install postgresql-13
+sudo apt-get -y install postgresql-14
 ```
 
 ------
