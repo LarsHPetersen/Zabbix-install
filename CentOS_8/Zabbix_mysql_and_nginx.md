@@ -150,7 +150,7 @@ sudo systemctl restart zabbix-server zabbix-agent nginx php-fpm
 # Enables the zabbix-server, zabbix-agent, nginx and php service to start automatically after a reboot.
 sudo systemctl enable zabbix-server zabbix-agent nginx php-fpm
 
-# Gets the status of zabbix-server, zabbix-agent, apache and php service.
+# Gets the status of zabbix-server, zabbix-agent, nginx and php service.
 sudo systemctl status zabbix-server zabbix-agent nginx php-fpm
 ```
 
